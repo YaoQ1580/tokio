@@ -1,0 +1,154 @@
+EAL: Detected CPU lcores: 64
+EAL: Detected NUMA nodes: 2
+EAL: Auto-detected process type: PRIMARY
+EAL: Detected shared linkage of DPDK
+EAL: Multi-process socket /var/run/dpdk/container-yyl_bkmarket_poll_test/mp_socket
+EAL: Selected IOVA mode 'VA'
+EAL: VFIO support initialized
+EAL: Using IOMMU type 1 (Type 1)
+EAL: Ignore mapping IO port bar(3)
+EAL: Probe PCI driver: net_ena (1d0f:ec20) device: 0000:0c:00.0 (socket 0)
+ena_get_metrics_entries(): 0x6 customer metrics are supported
+[hook] poll() called
+invalid proc_id:-1, use default 0
+[dpdk]: file_prefix=yyl_bkmarket_poll_test
+[dpdk]: lcore_mask=0x000000010000000
+[dpdk]: channel=4
+[dpdk]: promiscuous=0 # 设置成1, 则接受所有的请求, 设置成0, 如果连接哪个只会关注对应的ip请求
+[dpdk]: numa_on=1
+[dpdk]: tx_csum_offoad_skip=0
+[dpdk]: tso=0
+[dpdk]: idle_sleep=0
+[dpdk]: pkt_tx_delay=0
+[dpdk]: symmetric_rss=0
+[dpdk]: pci_whitelist=0000:0c:00.0
+[dpdk]: allow=0000:0c:00.0
+[dpdk]: port_list=0
+[dpdk]: nb_vdev=0
+[dpdk]: nb_bond=0
+[pcap]: enable=0
+[pcap]: snaplen=96
+[pcap]: savelen=16777216
+[pcap]: savepath=.
+[port0]: addr=10.40.10.205
+[port0]: netmask=255.255.240.0
+[port0]: broadcast=10.40.15.255
+[port0]: gateway=10.40.0.1
+[freebsd.boot]: hz=100
+[freebsd.boot]: fd_reserve=1024
+[freebsd.boot]: kern.ipc.maxsockets=262144
+[freebsd.boot]: net.inet.tcp.syncache.hashsize=4096
+[freebsd.boot]: net.inet.tcp.syncache.bucketlimit=100
+[freebsd.boot]: net.inet.tcp.tcbhashsize=65536
+[freebsd.boot]: kern.ncallout=262144
+[freebsd.boot]: kern.features.inet6=1
+[freebsd.sysctl]: kern.ipc.somaxconn=32768
+[freebsd.sysctl]: kern.ipc.maxsockbuf=16777216
+[freebsd.sysctl]: net.add_addr_allfibs=1
+[freebsd.sysctl]: net.link.ether.inet.maxhold=5
+[freebsd.sysctl]: net.inet.tcp.fast_finwait2_recycle=1
+[freebsd.sysctl]: net.inet.tcp.sendspace=8192
+[freebsd.sysctl]: net.inet.tcp.recvspace=16384
+[freebsd.sysctl]: net.inet.tcp.cc.algorithm=cubic
+[freebsd.sysctl]: net.inet.tcp.sendbuf_max=16777216
+[freebsd.sysctl]: net.inet.tcp.recvbuf_max=16777216
+[freebsd.sysctl]: net.inet.tcp.sendbuf_auto=1
+[freebsd.sysctl]: net.inet.tcp.recvbuf_auto=1
+[freebsd.sysctl]: net.inet.tcp.sendbuf_inc=16384
+[freebsd.sysctl]: net.inet.tcp.sack.enable=1
+[freebsd.sysctl]: net.inet.tcp.blackhole=1
+[freebsd.sysctl]: net.inet.tcp.msl=2000
+[freebsd.sysctl]: net.inet.tcp.delayed_ack=0
+[freebsd.sysctl]: net.inet.tcp.rfc1323=1
+[freebsd.sysctl]: net.inet.udp.blackhole=1
+[freebsd.sysctl]: net.inet.ip.redirect=0
+[freebsd.sysctl]: net.inet.ip.forwarding=0
+[freebsd.sysctl]: net.inet6.ip6.auto_linklocal=1
+[freebsd.sysctl]: net.inet6.ip6.accept_rtadv=2
+[freebsd.sysctl]: net.inet6.icmp6.rediraccept=1
+[freebsd.sysctl]: net.inet6.ip6.forwarding=0
+[freebsd.sysctl]: net.inet.tcp.functions_default=freebsd
+[freebsd.sysctl]: net.inet.tcp.hpts.skip_swi=1
+[freebsd.sysctl]: net.inet.tcp.hpts.minsleep=250
+[freebsd.sysctl]: net.inet.tcp.hpts.maxsleep=51200
+f-stack -c10000000 -n4 --proc-type=auto --file-prefix=container-yyl_bkmarket_poll_test --allow=0000:0c:00.0 
+[hook] pipe() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] epoll_create() called
+[YQ DEBUG]: epoll_create: isInit=0, run default sys call
+[hook] epoll_ctl() called
+[YQ DEBUG]: enter epoll_ctl, epfd:6, op:1, fd:4
+[YQ DEBUG]: epoll_ctl: isInit=0, run default sys call
+[hook] socket() called
+[YQ DEBUG]: socket: isInit=0, run default sys call
+[hook] bind() called
+[YQ DEBUG]: bind: isInit=0, run default sys call
+[hook] nanosleep() called
+[hook] recvmsg() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] nanosleep() called
+[hook] epoll_create() called
+[YQ DEBUG]: epoll_create: isInit=0, run default sys call
+[hook] epoll_ctl() called
+[YQ DEBUG]: enter epoll_ctl, epfd:6, op:1, fd:4
+[YQ DEBUG]: epoll_ctl: isInit=0, run default sys call
+[hook] epoll_ctl() called
+[YQ DEBUG]: enter epoll_ctl, epfd:6, op:1, fd:20
+[YQ DEBUG]: epoll_ctl: isInit=0, run default sys call
+[hook] nanosleep() called
+[hook] epoll_create() called
+[YQ DEBUG]: epoll_create: isInit=0, run default sys call
+[hook] epoll_ctl() called
+[YQ DEBUG]: enter epoll_ctl, epfd:6, op:1, fd:4
+[YQ DEBUG]: epoll_ctl: isInit=0, run default sys call
+[hook] epoll_ctl() called
+[YQ DEBUG]: enter epoll_ctl, epfd:6, op:1, fd:20
+[YQ DEBUG]: epoll_ctl: isInit=TELEMETRY: No legacy callbacks, legacy socket not created
+ena_rss_hash_set(): Setting RSS hash fields is not supported. Using default values: 0xc30
+0, run default sys call
+[hook] epoll_ctl() called
+[YQ DEBUG]: enter epoll_ctl, epfd:6, op:1, fd:19
+[YQ DEBUG]: epoll_ctl: isInit=0, run default sys call
+[hook] socket() called
+[YQ DEBUG]: socket: isInit=0, run default sys call
+[hook] bind() called
+[YQ DEBUG]: bind: isInit=0, run default sys call
+[hook] connect() called
+[hook] bind() called
+[YQ DEBUG]: bind: isInit=0, run default sys call
+[hook] listen() called
+[hook] accept() called
+lcore: 28, port: 0, queue: 0
+create mbuf pool on socket 0
+create ring:dispatch_ring_p0_q0 success, 2047 ring entries are now free!
+Port 0 MAC:06:97:2A:FD:60:CB
+Port 0 modified RSS hash function based on hardware support,requested:0x2003ffffc configured:0xc30
+RX checksum offload supported
+TX ip checksum offload supported
+TX TCP&UDP checksum offload supported
+TSO is disabled
+port[0]: rss table size: 128
+
+Checking link statusff_init finished
+forwarding datasource trying to connect "8.218.95.212:9999"
+connect to "8.218.95.212:9999"
+proxy client datasource trying to connect "8.218.95.212:9999"
+send first message: conn-id: conn-id:10328880122324747249
+proxy client datasource connect "8.218.95.212:9999" success
+connect to "8.218.95.212:9999" SUCCESS
+read_market_data update_id:0

@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "ff_declare_syscalls.h": "c",
+        "typeinfo": "cpp",
+        "chrono": "cpp",
+        "text_encoding": "cpp",
+        "algorithm": "cpp",
+        "format": "cpp",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "span": "c",
+        "utility": "c"
+    }
+}

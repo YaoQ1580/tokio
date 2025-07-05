@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# withHook - 轻量封装：自动 LD_PRELOAD 当下目录的 libhook.so
+# 用法：
+#   ./withHook <program> [args...]
+# 示例：
+#   ./withHook curl https://example.com
+
+set -euo pipefail
+
+# 解析脚本所在目录，保证从任何位置调用都能找到 libhook.so
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# 系统安装路径（与 Makefile 中 PREFIX/lib 保持一致）
+LIBDIR="/usr/local/lib"
+LIB="$LIBDIR/libhook.so"
+
+if [[ ! -f "$LIB" ]]; then
+  echo "[withHook] Error: $LIB not found. 请先执行 'sudo make install' 安装 libhook.so" >&2
+  exit 1
+fi
+
+export LD_LIBRARY_PATH="$LIBDIR:${LD_LIBRARY_PATH:-}"
+
+# 如果已存在 LD_PRELOAD，追加；否则新建
+if [[ -z "${LD_PRELOAD:-}" ]]; then
+  export LD_PRELOAD="$LIB"
+else
+  export LD_PRELOAD="$LIB:$LD_PRELOAD"
+fi
+
+# 透传执行
+exec "$@" 
